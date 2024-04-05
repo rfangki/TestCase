@@ -1,0 +1,33 @@
+.gallery {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+.image:hover {
+  filter: brightness(0.5);
+}
+
+@media (min-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
